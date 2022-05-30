@@ -4,18 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github Desafío</title>
+	<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <title>Galery </title>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Megrim&family=Merienda+One&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="/estilos/style.css">
+
 </head>
+
+<!-- Pagina inicio con grid-------------------->
 <body>
-    <header>
-        <h1>
-            Desafío de Github3333333333333333333333333333
-        </h1>
-    </header>
-    <main>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio adipisci explicabo aperiam? Impedit eius, iste deserunt rerum incidunt facere sequi vero reiciendis quas ipsum placeat non tempora expedita sapiente alias repellat hic delectus deleniti? Repellendus, nisi cupiditate ex aliquam consequatur est quisquam ipsam deserunt doloribus accusamus, sit, error exercitationem saepe laboriosam libero autem atque 
-        </p>
-    </main>
-</body>
+    <div class="contenedor">
+		<header class="header">
+			<div class="header-titulo"><h1>Galery Kovac</h1></div>
+				<nav class="navegador-header">
+					<a href="/Desafio4Coderhouse/index.html">Inicio</a>
+					<a href="/Desafio4Coderhouse/galery.html">Galeria</a>
+					<a href="/Desafio4Coderhouse/artist.html">Artistas</a>
+					<a href="/Desafio4Coderhouse/shopp.html">Comprar</a>
+					<a href="/Desafio4Coderhouse/form.html">Hablemos</a>             
+				</nav>
+			
+		</header>
+		<main class="contenido">
+			<div class="contenido-titulo"><h2>Noticias</h2></div>
+			<div class="contenido-noticias">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis rutrum gravida. Aliquam vel nunc sit amet nibh aliquam sollicitudin eu vitae elit. Duis varius turpis est, at feugiat metus blandit non. Mauris est nunc, ullamcorper nec egestas at, faucibus ac ex. Cras gravida ut odio eget vulputate. 
+				
+				</p>
+			</div>
+			<div class="contenido-imagenes" >
+				<img class="slide" src="/img/pintura12.jpg" class="w3-round" style="width:100%" >
+				<img class="slide" src="/img/pinture5.jpg"class="w3-round" style="width:100%" >
+				<img class="slide" src="/img/pintura7.jpg"class="w3-round" style="width:100%" >
+				<img class="slide" src="/img/pintura9.jpg"class="w3-round" style="width:100%" >
+				<img class="slide" src="/img/pintura13.jpg"class="w3-round" style="width:100%" >
+			
+
+			</div>
+			<script>
+				var myIndex = 0;
+				carousel();
+				
+				function carousel() {
+				  var i;
+				  var x = document.getElementsByClassName("slide");
+				  for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				  }
+				  myIndex++;
+				  if (myIndex > x.length) {myIndex = 1}    
+				  x[myIndex-1].style.display = "block";  
+				  setTimeout(carousel, 5000); // Change image every 2 seconds
+				}
+				</script>
+		</main>
+
+		<aside class="sidebar">
+			
+			<div id="rrss">
+				<div class="social-bar">
+					<a href="https://web.whatsapp.com/" class="icon icon-whatsapp" target="_blank ">Whatsapp </a>
+					<a href="https://instagram.com/" class="icon icon-instagram" target="_blank"> Instagram</a>
+					<a href="https://facebook.com" class="icon icon-facebook" target="_blank">Facebook</a>
+					<a href="#" class="icon icon-envelop" target="_blank">Correo</a> 
+				</div>      
+			</div>
+
+		</aside>
+		<footer class="footer">
+			<h3>FOOTER</h3>
+		</footer>
+	</div>
 </html>

@@ -1,0 +1,178 @@
+/* Lineas de estilos en css*/
+@import url('https://css.gg/instagram.css');
+@import url('https://css.gg/twitter.css');
+@import url('https://css.gg/image.css');
+
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f5f4f6;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*----------Contenedor padre + areas de grid-----------*/
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 10px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas: "header header header"
+						 "contenido contenido contenido"
+						 "sidebar sidebar sidebar"
+						 "footer footer footer";
+
+	
+}
+
+
+.contenedor .header, .contenedor .contenido, .contenedor .sidebar, .contenedor .footer {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+/*-------------------header--------------------*/
+
+.contenedor .header {
+	background-image: linear-gradient(to right, #f8f71f, #cced30, #a2e141, #79d44f, #4ec65c);
+	color: #12203E;
+	grid-area: header;
+}
+.header, .header-titulo{
+	font-size: 25px;
+	font-family: 'Bungee Shade', cursive;
+	text-align: center;
+
+
+
+}
+.navegador-header{
+	padding-top: 10px;
+	text-align: center;
+	
+	
+}
+a{
+	text-decoration: none;
+	margin: 0;
+	padding: 0;	
+	background-color: #fff;
+	display:flex;
+	display: inline-block;
+	padding: 1px;
+	color: black;
+	font-family: 'Megrim', cursive;
+}
+
+/* ------------- Contenido-----------------------*/
+.contenedor .contenido {
+	grid-area: contenido;
+}
+.contenido-titulo{
+	text-align: center;
+	padding-top:0;
+	padding-bottom:10px;
+	font-size: 20px;
+	font-family: 'Bungee Shade', cursive;
+	color: crimson;
+}
+.contenido-noticias{
+	font-family: 'Merienda One', cursive;
+}
+.contenido-imagenes{
+	max-width: 600px;
+	padding:10px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.slide{
+	display:none;
+}
+
+/*---------------sidebar--------------------*/
+.contenedor .sidebar {
+	grid-column: 3 / 4;
+	background-image: linear-gradient(to left, #f8f71f, #cced30, #a2e141, #79d44f, #4ec65c);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	grid-area: sidebar;
+}
+
+.sidebar-titulo{
+	text-align: center;
+	float: top;
+}
+
+.social-bar{
+	position: inline;
+	right: 0;
+	top: 20px;
+	font-size: 20px;
+	display: flex;
+	flex-direction: rows;
+	align-items: flex-start;
+	
+  }
+.icon {
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+	display: flex;
+	transition: all .5s;
+  }
+  .icon-whatsapp {
+	background: #79ed05;
+  }
+  .icon-instagram{
+	background: #de2c2c;
+  }
+  .icon-facebook{
+	background: #4117e6;
+  }
+  .icon-envelop{
+	background: #282927;
+  }
+  .icon:first-child{
+	border-radius: 10px 0 0 10px;
+  }
+  .icon:last-child{
+	border-radius: 0 10px 10px 0;
+  }
+  .icon:hover {
+	padding-right: 3rem;
+	border-radius: 1rem 0 0 1rem;
+	box-shadow: 0 0 .5rem rgba(0,0,0,0.42);
+  }
+  
+/*-----------------footer-----------------*/
+
+.contenedor .footer {
+	background-image: linear-gradient(to right, #4a34dd, #2e61e2, #4681db, #759ccc, #aab2ba);ckground: #0752f3;
+	color: #fff;
+	grid-area: footer;
+}
+
+@media screen and (min-width: 601px){
+	.contenedor {grid-template-areas: "header header header"
+		" contenido contenido sidebar "
+		" widget-1 widget-2 sidebar"
+		"footer footer footer";
+		
+	}
+} 
