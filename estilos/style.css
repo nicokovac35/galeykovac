@@ -63,6 +63,9 @@ a{
 	margin: 0;
 	padding: 0;	
 	background-color: #fff;
+	animation-name: animanav;
+  	animation-duration: 4s;
+ 	animation-iteration-count: infinite;
 	display:flex;
 	display: inline-block;
 	padding: 1px;
@@ -91,10 +94,14 @@ a{
 	display:flex;
 	align-items: center;
 	justify-content: center;
+	
 }
+
 .slide{
 	display:none;
+	
 }
+
 
 /*---------------sidebar--------------------*/
 .contenedor .sidebar {
@@ -159,8 +166,17 @@ a{
 .contenedor .footer {
 	background-image: linear-gradient(to right, #4a34dd, #2e61e2, #4681db, #759ccc, #aab2ba);background: #0752f3;
 	color: #fff;
+	height:100px;
 	grid-area: footer;
+	transition:  height 4s linear 1s;
+	
 }
+.footer:hover {
+	height:300px;
+}
+
+
+/*----------------------------mediasquare movil----------------------*/
 
 @media screen and (min-width: 601px){
 	.contenedor {grid-template-areas: 
@@ -171,3 +187,12 @@ a{
 		
 	}
 } 
+
+/* Animaciones*/
+
+@keyframes animanav{
+	0%   {background-color: rgb(247, 88, 88);}
+	25%  {background-color: rgb(237, 237, 68);}
+	50%  {background-color: rgb(86, 86, 239);}
+	100% {background-color: rgb(128, 242, 244);}
+}
